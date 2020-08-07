@@ -16,7 +16,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2.3.1
             - run: dotnet tool install --global dotnet-sonarscanner
-            - run: > # multiline value with each line ending with a newline character "\n"
+            - run: | # multiline value with each line ending with a newline character "\n"
                 dotnet sonarscanner begin -o:'droptophop' -k 'droptophop_week-4' -d:sonar.login='a6f39534e8445c8631302b33d0a97ac3735780ab' -d:sonar.host.url='https://sonarcloud.io/'
                 dotnet build
                 dotnet test -p:CollectCoverage=true
