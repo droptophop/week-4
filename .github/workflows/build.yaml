@@ -21,8 +21,8 @@ jobs:
                 dotnet build
                 dotnet test -p:CollectCoverage=true
                 dotnet sonarscanner end -d:sonar.login='a6f39534e8445c8631302b33d0a97ac3735780ab'
-            env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     # package:
     # deploy:
 
